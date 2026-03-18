@@ -67,6 +67,11 @@ npm start
 | PUT    | /Batches/id/{id}  | Update batch       |
 | DELETE | /Batches/id/{id}  | Delete batch       |
 
+## 📸 UI
+
+### 🖥️ Application UI
+<img src="Output.jpeg" width="700"/>
+
 💡 Future Improvements
 
 🔐 Authentication system
