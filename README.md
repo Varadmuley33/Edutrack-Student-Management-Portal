@@ -1,88 +1,177 @@
-# 🎓 EduTrack – Full Stack Student & Batch Management System
+# 🚀 EduTrack – Student & Batch Management System
 
-EduTrack is a full stack web application designed to manage student batches efficiently. It provides REST APIs for backend operations and a modern React-based frontend for user interaction.
+EduTrack is a full stack web application designed to manage student batches efficiently. It provides a robust backend using Spring Boot and a responsive frontend built with React.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 📦 Create, update, and delete batches
-- 📋 View all batch details
-- 💰 Manage course fees
-- 🔄 RESTful API integration
-- 🌐 Full stack architecture (Spring Boot + React)
+* Create, update, and delete batch records
+* View all batches in an organized layout
+* Manage batch fees
+* REST API-based communication
+* Clean and user-friendly interface
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Backend:
-- Java
-- Spring Boot
-- MongoDB
+### Backend
 
-### Frontend:
-- React.js
-- HTML, CSS, JavaScript
+* Java
+* Spring Boot
+* MongoDB
 
-### Tools:
-- Postman (API testing)
-- Git & GitHub
+### Frontend
+
+* React.js
+* HTML, CSS, JavaScript
+
+### Tools
+
+* Postman
+* Git & GitHub
 
 ---
 
 ## 📂 Project Structure
-```
+
 EduTrack/
 │
-├── edutrack/ → Spring Boot Backend
-└── edutrack-ui/ → React Frontend
-```
+├── edutrack/
+│   ├── src/main/java/com/edu/edutrack/
+│   │   ├── controller/
+│   │   ├── service/
+│   │   ├── repository/
+│   │   └── model/
+│   ├── src/main/resources/
+│   │   └── application.properties
+│   ├── pom.xml
+│   └── mvnw / mvnw.cmd
+│
+├── edutrack-ui/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   ├── package.json
+│   └── package-lock.json
+│
+└── README.md
 
 ---
 
-## ⚙️ Installation & Setup
+## ▶️ How to Run the Project
 
-### 🔹 Backend Setup
+### 🔹 Prerequisites
 
-```bash
+Make sure you have the following installed:
+
+* Java (JDK 17 or above)
+* Node.js and npm
+* MongoDB (running on localhost:27017)
+* IntelliJ IDEA or any Java IDE
+* Postman (for API testing)
+
+---
+
+### 🔹 Backend Setup (Spring Boot)
+
+1. Open the project in IntelliJ IDEA
+2. Navigate to the `edutrack` folder
+3. Open the main class (`EdutrackApplication.java`)
+4. Click on Run ▶️
+
+OR run using terminal:
+
 cd edutrack
 mvn spring-boot:run
-👉 Runs on: http://localhost:8080
 
+Backend runs on: http://localhost:8080
 
-🔹 Frontend Setup
+---
+
+### 🔹 Using Backend Only (Without Frontend)
+
+If you are not running the frontend, you can directly test APIs using Postman.
+
+1. Open Postman
+2. Use the following endpoints:
+
+* GET → http://localhost:8080/Batches
+* POST → http://localhost:8080/Batches
+* PUT → http://localhost:8080/Batches/id/{id}
+* DELETE → http://localhost:8080/Batches/id/{id}
+
+3. For POST and PUT requests, send JSON body:
+
+{
+"name": "Java Batch",
+"fees": 5000
+}
+
+👉 This allows full interaction with backend without frontend.
+
+---
+
+### 🔹 Frontend Setup (React)
+
+1. Open terminal inside `edutrack-ui` folder
+
 cd edutrack-ui
+
+2. Install dependencies:
+
 npm install
+
+3. Start the application:
+
 npm start
 
-👉 Runs on: http://localhost:3000
-```
+Frontend runs on: http://localhost:3000
+
+👉 The frontend automatically connects to backend APIs running on port 8080.
+
+---
+
+### 🔹 Full Stack Flow
+
+* Start MongoDB
+* Run backend (Spring Boot)
+* Run frontend (React) **or** use Postman to test APIs if frontend is not available
+
+
+👉 Then open browser and use the application normally
+
+---
+
+### 🔹 Database Setup (MongoDB)
+
+* Install MongoDB
+* Ensure MongoDB service is running
+* Default connection: mongodb://localhost:27017
+
+---
+
 ## 🔗 API Endpoints
 
-| Method | Endpoint           | Description        |
-|--------|-------------------|--------------------|
-| GET    | /Batches          | Get all batches    |
-| POST   | /Batches          | Create batch       |
-| PUT    | /Batches/id/{id}  | Update batch       |
-| DELETE | /Batches/id/{id}  | Delete batch       |
+GET     /Batches          → Fetch all batches
+POST    /Batches          → Create a batch
+PUT     /Batches/id/{id}  → Update batch
+DELETE  /Batches/id/{id}  → Delete batch
 
-## 📸 UI
+---
 
-### 🖥️ Application UI
-<img src="Output.jpeg" width="700"/>
+## 🔮 Future Improvements
 
-💡 Future Improvements
+* User authentication system
+* Dashboard with analytics
+* Responsive UI enhancements
+* Email notification system
 
-🔐 Authentication system
+---
 
-📊 Dashboard analytics
+## 👨‍💻 Author
 
-📱 Responsive UI
-
-📧 Email notifications
-
-👩‍💻 Author
-
-Pallavi
-
+Varad Muley
